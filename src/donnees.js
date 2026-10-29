@@ -11,7 +11,13 @@ export async function lireJson(chemin) {
     const texte = await readFile(chemin, 'utf8');
     return JSON.parse(texte);
   }catch(erreur){
- throw new Error("impossible de lire "+ chemin);
+    if(erreur.code === "ENOENT"){ 
+      throw new Error(`Impossible de lire ${chemin} : fichier introuvable`, {cause : erreur});
+    }
+    if (erreur instanceof SyntaxError){
+      throw new Error(`Impossible de lire ${chemin} : JSON invalide` ,{cause : erreur})
+    }
+   throw new Error(`Impossible de lire ${chemin}: ${erreur.message}` ,{cause : erreur});
   }
  
 }
