@@ -1,6 +1,7 @@
 // MEMBRE 4 — Données : lire et écrire les fichiers JSON de façon asynchrone.
 // Fiche : fiches/4-donnees.md · Vérifier : npm run test:donnees
 // À faire EN PREMIER : sans lireJson et chargerDonnees, l'application ne peut rien afficher.
+import { error } from "node:console";
 import { promises } from "node:fs";
 import { readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
@@ -39,7 +40,18 @@ export async function chargerDonnees(dossier) {
 // Exemple : creerReleve('p07', '64', '29', '2026-10-29')
 //   → { parcelle: 'P07', date: '2026-10-29', humidite: 64, temperature: 29 }
 export function creerReleve(parcelle, humiditeTexte, temperatureTexte, date) {
-  throw new Error("TODO Membre 4 : coder creerReleve dans src/donnees.js");
+  if(!parcelle || String(parcelle).trim() === ""){
+    throw new Error("parcelle manquante : indique l'identifiant");
+  }
+  const humidite = Number(humiditeTexte);
+  if(String(humiditeTexte).trim()=== '' || Number.isNaN(humidite) || humidite<0 || humidite>100){
+    throw new Error(`humidité invalide : "${humiditeTexte}" doit être un nombre entre 0 et 100`);
+  }
+  const temperature = Number(temperatureTexte);
+  if (String(temperatureTexte).trim() === '' || Number.isNaN(temperature)) {
+    throw new Error(`température invalide : "${temperatureTexte}" n'est pas un nombre`);
+  }
+  return { parcelle: String(parcelle).trim().toUpperCase(), date, humidite, temperature };
 }
 
 // Ajoute le relevé à la fin du fichier JSON, enregistre le fichier,
