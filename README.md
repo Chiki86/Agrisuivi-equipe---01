@@ -159,12 +159,12 @@ La date de la première ligne est celle du jour. Le formateur testera aussi votr
 
 ## Notre équipe
 
-| Rôle                  | Prénom et nom | Compte GitHub |
-| --------------------- | ------------- | ------------- |
-| Membre 1 — Parcelles  |               |               |
-| Membre 2 — Irrigation |               |               |
-| Membre 3 — Récoltes   |               |               |
-| Membre 4 — Données    |               |               |
+| Rôle                  | Prénom et nom    | Compte GitHub      |
+| --------------------- | -------------    | -------------      |
+| Membre 1 — Parcelles  |ANOH LEVI         |livingston-hackerman|
+| Membre 2 — Irrigation |MAMADOU EVELYNE   |satynemamadou-spec  |
+| Membre 3 — Récoltes   |KAMAGATE JUNIOR   |jjkama00            |
+| Membre 4 — Données    |SOUMAHORO CHEICK  |chiki86             |
 =======
 # Agrisuivi-equipe---01
 >>>>>>> efc9ffbeb05a3f966c716b217ec476eb5228d18b
