@@ -13,22 +13,25 @@ export function totalRecolte(recoltes, idParcelle){
 // Renvoie le rendement en kg par hectare, arrondi à l'entier le plus proche.
 // Une surface nulle ou négative est une erreur : on lance une RangeError.
 export function rendement(kg, surface) {
-  
+  if (surface>0){
+    return Math.round (kg/surface);
+  }else{
+  throw new RangeError("TODO Membre 3 : coder rendement dans src/recoltes.js");
 }
+}
+
 // Renvoie le revenu estimé en FCFA.
 export function revenu(kg, prixKg) {
   
-
 }
 
 // Renvoie une ligne de bilan par parcelle, dans le même ordre que parcelles.
 // Chaque ligne : { id, producteur, culture, kg, rendement, revenu }
 export function bilanRecoltes(parcelles, recoltes, cultures) {
- 
+  
 }
 
 // Renvoie une COPIE du bilan, triée du plus grand revenu au plus petit.
 // Le tableau reçu ne doit pas changer d'ordre.
 export function classerParRevenu(bilan) {
-
 }
