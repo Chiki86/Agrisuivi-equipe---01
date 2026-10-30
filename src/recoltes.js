@@ -22,7 +22,8 @@ export function rendement(kg, surface) {
 
 // Renvoie le revenu estimé en FCFA.
 export function revenu(kg, prixKg) {
-  
+  return kg*prixKg
+
 }
 
 // Renvoie une ligne de bilan par parcelle, dans le même ordre que parcelles.
