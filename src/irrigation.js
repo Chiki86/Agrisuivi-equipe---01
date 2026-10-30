@@ -27,6 +27,7 @@ export function etatIrrigation(humidite, culture) {
     return `ARROSER`;
 
   }
+  
   else if (humidite>culture.humiditeMax) {
     return `DRAINER`;
   }
