@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-# AgriSuivi — mini-projet d'équipe
+# AgriSuivi — Equipe 1
 
 ## Le scénario
 
@@ -165,6 +164,4 @@ La date de la première ligne est celle du jour. Le formateur testera aussi votr
 | Membre 2 — Irrigation |MAMADOU EVELYNE   |satynemamadou-spec  |
 | Membre 3 — Récoltes   |KAMAGATE JUNIOR   |jjkama00            |
 | Membre 4 — Données    |SOUMAHORO CHEICK  |chiki86             |
-=======
-# Agrisuivi-equipe---01
->>>>>>> efc9ffbeb05a3f966c716b217ec476eb5228d18b
+
