@@ -8,7 +8,14 @@ import { bilanRecoltes, classerParRevenu } from "./recoltes.js";
 
 // Renvoie les id des alertes qui ont cet état, séparés par ', ', ou 'aucune'.
 export function listerParEtat(alertes, etat) {
-  throw new Error("TODO Équipe : coder listerParEtat dans src/rapport.js");
+const ids = alertes
+    .filter((alerte) => alerte.etat === etat)
+    .map((alerte) => alerte.id);
+
+  if (ids.length === 0) {
+    return 'aucune';
+  }
+  return ids.join(', ');
 }
 
 // Renvoie le texte complet du rapport (voir fiches/5-equipe-rapport.md).
